@@ -24,21 +24,21 @@ public class MotorMove : MonoBehaviour
     void Update()
     {   
         if (Input.GetKeyDown(_backwardKey)){
-            print(_backwardKey);
+            //print(_backwardKey);
             _jointMotor.motorSpeed = _backSpeed;
             _hingeJoint.motor = _jointMotor;
         }else if(Input.GetKeyUp(_backwardKey)){
-            print(_backwardKey);
+            //print(_backwardKey);
             _jointMotor.motorSpeed = 0f;
             _hingeJoint.motor = _jointMotor;
         }
         
         if (Input.GetKeyDown(_forwardKey)){
-            print(_forwardKey);
+            //print(_forwardKey);
             _jointMotor.motorSpeed = _forwardSpeed;
             _hingeJoint.motor = _jointMotor;
         }else if(Input.GetKeyUp(_forwardKey)){
-            print(_forwardKey);
+            //print(_forwardKey);
             _jointMotor.motorSpeed = 0f;
             _hingeJoint.motor = _jointMotor;
         }
