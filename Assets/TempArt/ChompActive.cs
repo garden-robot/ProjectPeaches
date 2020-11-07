@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChompZone : MonoBehaviour
+public class ChompActive : MonoBehaviour
 {
     [SerializeField] private GameObject _chompZone = null;
     private Transform _jaw = null;
@@ -16,7 +16,7 @@ public class ChompZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_jaw.rotation.z >= 0f && _jaw.rotation.z <= 1f)
+        if(_jaw.localRotation.z >= 0f && _jaw.localRotation.z <= 1f)
         {
             _chompZone.SetActive(true);
         }else{
