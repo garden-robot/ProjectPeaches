@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: e121ddd810bb660449f4c5f71c86f922
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -140961872236939925
+    second: peaches-unity-sheet3_0
+  - first:
+      213: 2481640694954653290
+    second: peaches-unity-sheet3_1
+  - first:
+      213: 4693273754017908413
+    second: peaches-unity-sheet3_2
+  - first:
+      213: -7382612727348249019
+    second: peaches-unity-sheet3_3
+  - first:
+      213: -1353354778038954721
+    second: peaches-unity-sheet3_4
+  - first:
+      213: 3989422796956068125
+    second: peaches-unity-sheet3_5
+  - first:
+      213: -3237777513318256422
+    second: peaches-unity-sheet3_6
+  - first:
+      213: 4125906947976773205
+    second: peaches-unity-sheet3_7
+  - first:
+      213: 7010053420050323002
+    second: peaches-unity-sheet3_8
+  - first:
+      213: 6475773938782530232
+    second: peaches-unity-sheet3_9
+  - first:
+      213: -358621685758150856
+    second: peaches-unity-sheet3_10
+  - first:
+      213: 777886155601733930
+    second: peaches-unity-sheet3_11
+  - first:
+      213: -8943910329582255679
+    second: peaches-unity-sheet3_12
+  - first:
+      213: -7124948869381177930
+    second: peaches-unity-sheet3_13
+  - first:
+      213: -2170204557520290930
+    second: peaches-unity-sheet3_14
+  - first:
+      213: 2642457634663389772
+    second: peaches-unity-sheet3_15
+  - first:
+      213: -4339554728131579529
+    second: peaches-unity-sheet3_16
+  - first:
+      213: 5614272117171791285
+    second: peaches-unity-sheet3_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1019
+        width: 185
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65717e8ce33b0ef0800000000000000
+      internalID: -140961872236939925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_1
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1050
+        width: 47
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66fce2501f807220800000000000000
+      internalID: 2481640694954653290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_2
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1051
+        width: 47
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6c6edfc9bd12140800000000000000
+      internalID: 4693273754017908413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_3
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 949
+        width: 500
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e3128d6d0bb8990800000000000000
+      internalID: -7382612727348249019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 892
+        width: 167
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1519efeffae73de0800000000000000
+      internalID: -1353354778038954721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_5
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 764
+        width: 284
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19696f95e64d5730800000000000000
+      internalID: 3989422796956068125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 615
+        width: 198
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0fae0918a1113d0800000000000000
+      internalID: -3237777513318256422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_7
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 324
+        width: 177
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55eb87a528a224930800000000000000
+      internalID: 4125906947976773205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_8
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 268
+        width: 142
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a369c96d176b84160800000000000000
+      internalID: 7010053420050323002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_9
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 308
+        width: 142
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba6dd256129ed950800000000000000
+      internalID: 6475773938782530232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_10
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 319
+        width: 177
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83732a31a7be50bf0800000000000000
+      internalID: -358621685758150856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_11
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 4
+        width: 140
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29e55c465b9bca00800000000000000
+      internalID: 777886155601733930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_12
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 217
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c18d4e21f8d0e380800000000000000
+      internalID: -8943910329582255679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_13
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 0
+        width: 140
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdb6bdb0c81f1d90800000000000000
+      internalID: -7124948869381177930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_14
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 6
+        width: 198
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8bb1130472e1e1e0800000000000000
+      internalID: -2170204557520290930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_15
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 6
+        width: 198
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a5128e735eba420800000000000000
+      internalID: 2642457634663389772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_16
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 212
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771b95a77fdc6c3c0800000000000000
+      internalID: -4339554728131579529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches-unity-sheet3_17
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 56
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5a760beb6e9ed40800000000000000
+      internalID: 5614272117171791285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
