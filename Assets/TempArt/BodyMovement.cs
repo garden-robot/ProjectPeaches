@@ -11,8 +11,8 @@ public class BodyMovement : MonoBehaviour
     [SerializeField] private float _jumpSpeed = 1f;
     [SerializeField] private GameObject _buttFire = null;
     [SerializeField] private GameObject _jumpFire = null;
-    // [SerializeField] private bool _direction = false;
-    [SerializeField] private GameObject BodyFlip;
+    [SerializeField] private string _direction = "left";
+    [SerializeField] private GameObject _bodyFlip;
 
     private Rigidbody2D _rigidBody = null;
     private Transform _transform = null;
@@ -27,10 +27,6 @@ public class BodyMovement : MonoBehaviour
 
     void Update()
     { 
-     
-
-  
-
         {
 
             //THRUST
@@ -62,7 +58,7 @@ public class BodyMovement : MonoBehaviour
                     
                 }
                 */
-                _rigidBody.velocity += (new Vector2(-_transform.right.x, (_transform.right.y -1 )) * _speed);
+                _rigidBody.velocity += (new Vector2(_transform.right.x, (_transform.right.y -1 )) * _speed);
             }
             else if (Input.GetKeyUp(_thrustButton_right))
             {
@@ -99,6 +95,17 @@ public class BodyMovement : MonoBehaviour
                 }
             }
            */
+            
+            if((Input.GetKeyDown(_thrustButton) && _bodyFlip.transform.localScale.x == -1f) || (Input.GetKeyDown(_thrustButton_right) && _bodyFlip.transform.localScale.x == 1f))
+            {
+                _bodyFlip.transform.localScale = 
+                    new Vector3(
+                    -_bodyFlip.transform.localScale.x, 
+                    _bodyFlip.transform.localScale.y, 
+                    _bodyFlip.transform.localScale.z);
+
+                print(_direction);
+            }
         }
         
     }
