@@ -8375,6 +8375,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8032908111713628732, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
+        type: 3}
+      propertyPath: m_ChildForceExpandHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032908111713628732, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
+        type: 3}
+      propertyPath: m_ChildControlHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8393,22 +8403,22 @@ PrefabInstance:
     - target: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.3716492
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.92837334
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
         type: 3}
@@ -8428,7 +8438,7 @@ PrefabInstance:
     - target: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -43.635002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
         type: 3}
@@ -8484,6 +8494,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogueBoxHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032908113228898098, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 02942a5b7f165464da41c2b5676aed89,
+        type: 3}
+    - target: {fileID: 8032908113228898098, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c633a0a4ec182f14fb64e55e1b0f2dd9, type: 3}
