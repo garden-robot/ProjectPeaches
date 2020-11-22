@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 124354167}
   - component: {fileID: 124354168}
+  - component: {fileID: 124354169}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -147,7 +148,7 @@ RectTransform:
   m_GameObject: {fileID: 124354166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children:
   - {fileID: 1396650074}
   - {fileID: 1948770366}
@@ -158,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 34.188, y: -10.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &124354168
@@ -169,6 +170,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124354166}
   m_CullTransparentMesh: 0
+--- !u!95 &124354169
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124354166}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1dc304ecfa4635747826ccf004b88dc8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &349195682
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -282,9 +302,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Button
-
-'
+  m_Text: Begin
 --- !u!222 &656984195
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -464,19 +482,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1319298774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb5dc06583d115f4491818e0dcb7b4f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e06e220209d3b640a955ba7472857de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 1382858387}
-  _unHoverSize: {x: 0.7, y: 0.7}
+  _unHoverSize: {x: 1, y: 1}
   _hoverSize: {x: 0.3, y: 0.3}
   _clickSize: {x: 0.4, y: 0.4}
-  _textHoverColor: {r: 0, g: 0.03245783, b: 1, a: 1}
+  _textHoverColor: {r: 1, g: 1, b: 1, a: 1}
   _textUnhoverColor: {r: 1, g: 1, b: 1, a: 1}
   _textUnhoverSize: 20
-  _textHoverSize: 20
-  _textClickSize: 25
+  _textHoverSize: 30
+  _textClickSize: 35
   _buttonWaitTime: 0.05
+  _cameraAnim: {fileID: 1893235275}
+  _camScaleTime: 5
+  _credits: {fileID: 124354169}
+  _buttons:
+  - {fileID: 1319298776}
+  - {fileID: 1748272780}
+  - {fileID: 1462722644}
+  _clickedTime: 0.4
 --- !u!114 &1319298778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,21 +552,6 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1319298777}
           m_MethodName: QuitOnClick
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 13
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1319298777}
-          m_MethodName: OnPointerExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -692,7 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -711,9 +722,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Button
-
-'
+  m_Text: Quit
 --- !u!222 &1382858388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -813,8 +822,8 @@ GameObject:
   - component: {fileID: 1462722648}
   - component: {fileID: 1462722647}
   - component: {fileID: 1462722646}
-  - component: {fileID: 1462722645}
   - component: {fileID: 1462722644}
+  - component: {fileID: 1462722645}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -870,19 +879,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1462722642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb5dc06583d115f4491818e0dcb7b4f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e06e220209d3b640a955ba7472857de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 2012902226}
-  _unHoverSize: {x: 0.7, y: 0.7}
+  _unHoverSize: {x: 1, y: 1}
   _hoverSize: {x: 0.3, y: 0.3}
   _clickSize: {x: 0.4, y: 0.4}
-  _textHoverColor: {r: 0, g: 0.03245783, b: 1, a: 1}
+  _textHoverColor: {r: 1, g: 1, b: 1, a: 1}
   _textUnhoverColor: {r: 1, g: 1, b: 1, a: 1}
   _textUnhoverSize: 20
-  _textHoverSize: 20
-  _textClickSize: 25
+  _textHoverSize: 30
+  _textClickSize: 35
   _buttonWaitTime: 0.05
+  _cameraAnim: {fileID: 1893235275}
+  _camScaleTime: 5
+  _credits: {fileID: 124354169}
+  _buttons:
+  - {fileID: 1462722644}
+  - {fileID: 1748272780}
+  - {fileID: 1319298776}
+  _clickedTime: 0.4
 --- !u!114 &1462722646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,22 +948,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1462722645}
-          m_MethodName: CreditsOnClick
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 13
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1462722645}
-          m_MethodName: OnPointerExit
+          m_MethodName: QuitOnClick
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1183,7 +1185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1238,7 +1240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1271,19 +1273,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748272773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb5dc06583d115f4491818e0dcb7b4f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e06e220209d3b640a955ba7472857de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 656984194}
-  _unHoverSize: {x: 0.7, y: 0.7}
+  _unHoverSize: {x: 1, y: 1}
   _hoverSize: {x: 0.3, y: 0.3}
   _clickSize: {x: 0.4, y: 0.4}
-  _textHoverColor: {r: 0, g: 0.03245783, b: 1, a: 1}
+  _textHoverColor: {r: 1, g: 1, b: 1, a: 1}
   _textUnhoverColor: {r: 1, g: 1, b: 1, a: 1}
   _textUnhoverSize: 20
-  _textHoverSize: 20
-  _textClickSize: 25
+  _textHoverSize: 30
+  _textClickSize: 35
   _buttonWaitTime: 0.05
+  _cameraAnim: {fileID: 1893235275}
+  _camScaleTime: 5
+  _credits: {fileID: 124354169}
+  _buttons:
+  - {fileID: 1748272780}
+  - {fileID: 1462722644}
+  - {fileID: 1319298776}
+  _clickedTime: 0.4
 --- !u!114 &1748272779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1332,22 +1342,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1748272778}
-          m_MethodName: BeginOnClick
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 13
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1748272778}
-          m_MethodName: OnPointerExit
+          m_MethodName: QuitOnClick
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1533,6 +1528,7 @@ GameObject:
   - component: {fileID: 1893235274}
   - component: {fileID: 1893235273}
   - component: {fileID: 1893235272}
+  - component: {fileID: 1893235275}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1605,6 +1601,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1893235275
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893235271}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 48e2aaf48d9d5f044ad4482af9cb7391, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1948770365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,7 +1750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1754,9 +1769,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Button
-
-'
+  m_Text: Credits
 --- !u!222 &2012902227
 CanvasRenderer:
   m_ObjectHideFlags: 0
