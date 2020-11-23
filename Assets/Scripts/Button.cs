@@ -27,14 +27,13 @@ public class Button : MonoBehaviour
     //Fade out Buttons
     [SerializeField] private Animator[] _buttons = null;
     [SerializeField] private float _clickedTime = 0.2f;
+    [SerializeField] private Animator _backButton = null;
     private float _clickedTimer = 1f;
     private int _index = 0;
- 
     private RectTransform _button = null;
-
     private bool _clicked = false;
-
-
+    private bool _backClicked = false;
+    private bool _creditsClicked = false;
 
     void Awake()
     {
@@ -71,8 +70,18 @@ public class Button : MonoBehaviour
     {
         _text.fontSize = _textClickSize;
         _button.localScale = _clickSize;
+        _creditsClicked = true;
         _credits.SetBool("Clicked", true);
         _clicked = true;
+
+    }
+
+    public void CreditsBackOnClick()
+    {
+        _text.fontSize = _textClickSize;
+        _button.localScale = _clickSize;
+        _credits.SetBool("Clicked", false);
+        _backClicked = true;
     }
 
         public void QuitOnClick()
@@ -87,17 +96,41 @@ public class Button : MonoBehaviour
     {
         if(_clicked == true)
         {
+            if (_creditsClicked == true)
+            {
+                //_backButton.SetTrigger("Clicked");
+            }
+
             if (_index < _buttons.Length)
             { 
                 _clickedTimer -= Time.deltaTime;
-                print(_clickedTimer);
                 if(_clickedTimer<=0f)
                 {
-                    print(_index);
                     _buttons[_index].SetTrigger("Clicked");
                     _clickedTimer = _clickedTime;
                     _index++;
                 }
+            }else{
+                _index = 0;
+                _clicked = false;
+            }
+        }
+
+        if(_backClicked == true)
+        {
+            _backButton.SetTrigger("UnClicked");
+            if (_index < _buttons.Length)
+            { 
+                _clickedTimer -= Time.deltaTime;
+                if(_clickedTimer<=0f)
+                {
+                    _buttons[_index].SetTrigger("Clicked");
+                    _clickedTimer = _clickedTime;
+                    _index++;
+                }
+            }else{
+                _index = 0;
+                _backClicked = false;
             }
         }
     }
