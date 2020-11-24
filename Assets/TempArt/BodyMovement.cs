@@ -13,6 +13,7 @@ public class BodyMovement : MonoBehaviour
     [SerializeField] private GameObject _jumpFire = null;
     [SerializeField] private string _direction = "left";
     [SerializeField] private GameObject _bodyFlip;
+    [SerializeField] private HingeJoint2D[] allChildren;
 
     private Rigidbody2D _rigidBody = null;
     private Transform _transform = null;
@@ -23,10 +24,20 @@ public class BodyMovement : MonoBehaviour
         _transform = GetComponent<Transform>();
         _buttFire.SetActive(false);
         _jumpFire.SetActive(false);
+        HingeJoint2D[] allChildren = GetComponentsInChildren<HingeJoint2D>();
+        /*
+        foreach (Transform child in allChildren)
+        {
+            HingeJoint2D hinge = child.GetComponent<HingeJoint2D>();
+            //ConnectedAnchor2D anchor = hinge.connectedanchor;
+
+        }
+        */
     }
 
+
     void Update()
-    { 
+    {
         {
 
             //THRUST
@@ -39,7 +50,7 @@ public class BodyMovement : MonoBehaviour
                     BodyFlip.transform.Rotate(0, 0,0, Space.Self);
                     
                 }*/
-                _rigidBody.velocity += (new Vector2(-_transform.right.x, -(_transform.right.y + 1)) * _speed);
+                _rigidBody.velocity += (new Vector2(-_transform.right.x, -(_transform.right.y)) * _speed);
 
             }
             else if (Input.GetKeyUp(_thrustButton))
@@ -58,12 +69,12 @@ public class BodyMovement : MonoBehaviour
                     
                 }
                 */
-                _rigidBody.velocity += (new Vector2(_transform.right.x, (_transform.right.y -1 )) * _speed);
+                _rigidBody.velocity += (new Vector2(_transform.right.x, (_transform.right.y)) * _speed);
             }
             else if (Input.GetKeyUp(_thrustButton_right))
             {
                 _buttFire.SetActive(false);
-                
+
                 //_rigidBody.velocity = Vector2.zero;
             }
 
@@ -80,33 +91,42 @@ public class BodyMovement : MonoBehaviour
                 _jumpFire.SetActive(false);
                 //_rigidBody.velocity = Vector2.zero;
             }
-            //CHANGE DIRECTION
-            /*
-            if (Input.GetKeyDown(_directionButton))
+
+
+            if ((Input.GetKeyDown(_thrustButton) && _bodyFlip.transform.localScale.x == -1f) || (Input.GetKeyDown(_thrustButton_right) && _bodyFlip.transform.localScale.x == 1f))
             {
-                _direction = !_direction;
-                if (_direction == true)
-                {
-                    _rigidBody.rotation.Set(_rigidBody.rotation.x, _rigidBody.rotation.y - 180, _rigidBody.rotation.z, _rigidBody.rotation.w);
-                }
-                else
-                {
-                    _rigidBody.rotation.Set(_rigidBody.rotation.x, _rigidBody.rotation.y + 180, _rigidBody.rotation.z, trans.rotation.w);
-                }
-            }
-           */
-            
-            if((Input.GetKeyDown(_thrustButton) && _bodyFlip.transform.localScale.x == -1f) || (Input.GetKeyDown(_thrustButton_right) && _bodyFlip.transform.localScale.x == 1f))
-            {
-                _bodyFlip.transform.localScale = 
+                _bodyFlip.transform.localScale =
                     new Vector3(
-                    -_bodyFlip.transform.localScale.x, 
-                    _bodyFlip.transform.localScale.y, 
+                    -_bodyFlip.transform.localScale.x,
+                    _bodyFlip.transform.localScale.y,
                     _bodyFlip.transform.localScale.z);
 
                 print(_direction);
+
+
+
+                foreach (HingeJoint2D child in allChildren)
+                {
+                    Debug.Log("check");
+
+
+
+                    // HingeJoint2D hinge = child.GetComponent<HingeJoint2D>();
+
+                    if (child.useLimits == true)
+                    {
+                        JointAngleLimits2D limits = child.limits;
+                        limits.min += 180;
+                        limits.max += 180;
+                    }
+
+
+                }
+
             }
         }
-        
     }
 }
+
+    
+
