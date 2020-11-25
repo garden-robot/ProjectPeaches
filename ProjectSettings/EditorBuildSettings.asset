@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/WalidScene.unity
+    guid: 0fb2022162c634bf488a622ae8af9ba6
   m_configObjects: {}
