@@ -6,11 +6,14 @@ using UnityEngine;
 public class ChompCollision : MonoBehaviour
 {
     [SerializeField] private GameObject Bod;
+ 
+
 
     public void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.tag == "biteable")
         {
+          
             print("yes");
             var newHinge = gameObject.AddComponent<HingeJoint2D>(); //make the new joint component
             newHinge.connectedBody = other.rigidbody; //connect it to the object we collided with
@@ -18,8 +21,10 @@ public class ChompCollision : MonoBehaviour
             newHinge.anchor = transform.InverseTransformPoint(contactPosition); //convert world to local space and use it to set the anchor
                                                                                 //newHinge.enableCollision = true; //enable the connected objects to collide (if you want)
             gameObject.transform.parent = Bod.transform;
+            
         }
     }
+
 }
 
     /*

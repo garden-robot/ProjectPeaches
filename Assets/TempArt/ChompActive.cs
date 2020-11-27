@@ -5,6 +5,8 @@ using UnityEngine;
 public class ChompActive : MonoBehaviour
 {
     [SerializeField] private GameObject _chompZone = null;
+    [SerializeField] private Transform _pickUpObject = null;
+    [SerializeField] private ChompCollision _chompCollider;
     private Transform _jaw = null;
 
     void Awake()
@@ -16,11 +18,34 @@ public class ChompActive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_jaw.localRotation.z >= 0f && _jaw.localRotation.z <= 1f)
+        //if(_jaw.localRotation.z >= 0f && _jaw.localRotation.z <= 1f)
+        if (Input.GetMouseButton(0))
         {
             _chompZone.SetActive(true);
-        }else{
-            _chompZone.SetActive(false);
+           
         }
+        else{
+           
+                _chompZone.SetActive(false);
+            }
+
+
+
+        if (_chompZone.activeInHierarchy)
+        {
+            _pickUpObject = this.gameObject.transform.GetChild(transform.childCount - 1);
+        }
+        else
+        {
+            if(_pickUpObject != null && _pickUpObject.tag == "pickUp")
+            {
+                _pickUpObject.parent = null;
+            }
+        }
+
+
     }
+
+
+
 }

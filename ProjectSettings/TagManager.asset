@@ -6,6 +6,7 @@ TagManager:
   tags:
   - wall
   - biteable
+  - pickUp
   layers:
   - Default
   - TransparentFX

@@ -13,8 +13,9 @@ public class BodyMovement : MonoBehaviour
     [SerializeField] private GameObject _jumpFire = null;
     [SerializeField] private string _direction = "left";
     [SerializeField] private GameObject _bodyFlip;
-    [SerializeField] private HingeJoint2D[] allChildren;
+    [SerializeField] private Rigidbody2D[] allChildren;
 
+    public LookTowardMouse _lookTowardMouse;
     private Rigidbody2D _rigidBody = null;
     private Transform _transform = null;
 
@@ -24,7 +25,9 @@ public class BodyMovement : MonoBehaviour
         _transform = GetComponent<Transform>();
         _buttFire.SetActive(false);
         _jumpFire.SetActive(false);
-        HingeJoint2D[] allChildren = GetComponentsInChildren<HingeJoint2D>();
+        // HingeJoint2D[] allChildren = GetComponentsInChildren<HingeJoint2D>();
+        Rigidbody2D[] allChildren = GetComponentsInChildren<Rigidbody2D>();
+
         /*
         foreach (Transform child in allChildren)
         {
@@ -70,6 +73,7 @@ public class BodyMovement : MonoBehaviour
                 }
                 */
                 _rigidBody.velocity += (new Vector2(_transform.right.x, (_transform.right.y)) * _speed);
+
             }
             else if (Input.GetKeyUp(_thrustButton_right))
             {
@@ -93,40 +97,81 @@ public class BodyMovement : MonoBehaviour
             }
 
 
-            if ((Input.GetKeyDown(_thrustButton) && _bodyFlip.transform.localScale.x == -1f) || (Input.GetKeyDown(_thrustButton_right) && _bodyFlip.transform.localScale.x == 1f))
+            if ((Input.GetKeyDown(_thrustButton) && _bodyFlip.transform.localScale.x == -1f || Input.GetKeyDown(_thrustButton_right) && _bodyFlip.transform.localScale.x == 1f))
             {
                 _bodyFlip.transform.localScale =
-                    new Vector3(
-                    -_bodyFlip.transform.localScale.x,
-                    _bodyFlip.transform.localScale.y,
-                    _bodyFlip.transform.localScale.z);
-
-                print(_direction);
-
-
-
-                foreach (HingeJoint2D child in allChildren)
+                  new Vector3(
+                  -_bodyFlip.transform.localScale.x,
+                  _bodyFlip.transform.localScale.y,
+                  _bodyFlip.transform.localScale.z);
+                foreach (Rigidbody2D child in allChildren)
                 {
-                    Debug.Log("check");
-
-
-
-                    // HingeJoint2D hinge = child.GetComponent<HingeJoint2D>();
-
-                    if (child.useLimits == true)
+                    if (child.constraints == RigidbodyConstraints2D.None)
                     {
-                        JointAngleLimits2D limits = child.limits;
-                        limits.min += 180;
-                        limits.max += 180;
+                        child.constraints = RigidbodyConstraints2D.FreezeRotation;
                     }
-
-
                 }
 
-            }
-        }
-    }
-}
 
-    
+
+
+            }
+
+            foreach (Rigidbody2D child in allChildren)
+            {
+                if (child.constraints == RigidbodyConstraints2D.FreezeRotation)
+                {
+                    child.constraints = RigidbodyConstraints2D.None;
+                }
+            }
+            if (_bodyFlip.transform.localScale.x == -1f)
+            {
+                _lookTowardMouse.angleOffset = 0;
+            }
+            if (_bodyFlip.transform.localScale.x == 1f)
+            {
+                _lookTowardMouse.angleOffset = 180;
+            }
+            /*
+            foreach (HingeJoint2D child in allChildren)
+            {
+                Debug.Log("check");
+
+
+
+
+                // HingeJoint2D hinge = child.GetComponent<HingeJoint2D>();
+
+                if (child.useLimits == true)
+                {
+                    child.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+                    Debug.Log("true");
+                    JointAngleLimits2D limits = child.limits;
+                    Debug.Log(limits.min);
+                    child.useLimits = false;
+
+
+                    if (_bodyFlip.transform.localScale.x == -1f)
+                    {
+                        limits.min = 180 - limits.min;
+                        limits.max = 180 - limits.max;
+                    }
+
+                }
+                */
+            //neck and leg mode options
+            //moochi's- 'virtuoso'
+            //'turbo' mode
+            //movement not so linear, make it feel
+            //hold button longer make it quicker
+
+
+
+
+        }
+
+    }
+
+}
 
