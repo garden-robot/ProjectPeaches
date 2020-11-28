@@ -32,15 +32,15 @@ public class HeadMove : MonoBehaviour
     private void FixedUpdate()
     {
         // add a force to rigidbody (moves the ship horizontally and vertically)
-        //rb.AddForce(new Vector2(hValue, vValue));
+        rb.AddForce(new Vector2(0, vValue));
         //
         // moves ship toward/away the direction its facing
-        rb.AddForce(transform.up * vValue);
+       // rb.AddForce(transform.up * vValue);
     }
 
     void GetInput()
     {
-        hValue = Input.GetAxis("Horizontal") * movementForce;
-        //vValue = Input.GetAxis("Vertical") * movementForce;
+        //hValue = Input.GetAxis("Horizontal") * movementForce;
+        vValue = Input.GetAxis("Vertical") * movementForce;
     }
 }

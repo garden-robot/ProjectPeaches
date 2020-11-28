@@ -7,12 +7,14 @@ public class ChompActive : MonoBehaviour
     [SerializeField] private GameObject _chompZone = null;
     [SerializeField] private Transform _pickUpObject = null;
     [SerializeField] private ChompCollision _chompCollider;
+    public Animation anim;
     private Transform _jaw = null;
 
     void Awake()
     {
         _chompZone.SetActive(false);
         _jaw = GetComponent<Transform>();
+        
     }
 
     // Update is called once per frame
@@ -22,7 +24,9 @@ public class ChompActive : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             _chompZone.SetActive(true);
-           
+            anim.enabled = true;
+            anim.Play("Jaw open");
+
         }
         else{
            
@@ -34,12 +38,19 @@ public class ChompActive : MonoBehaviour
         if (_chompZone.activeInHierarchy)
         {
             _pickUpObject = this.gameObject.transform.GetChild(transform.childCount - 1);
+
+            if (_pickUpObject.tag == "pickUp")
+            {
+                anim.enabled = false;
+            }
         }
         else
         {
             if(_pickUpObject != null && _pickUpObject.tag == "pickUp")
             {
                 _pickUpObject.parent = null;
+                var joint =  _pickUpObject.gameObject.GetComponent<HingeJoint2D>();
+                Destroy(joint);
             }
         }
 

@@ -20,6 +20,7 @@ public class ChompCollision : MonoBehaviour
             var contactPosition = other.contacts[0].point; //get world position of first contact
             newHinge.anchor = transform.InverseTransformPoint(contactPosition); //convert world to local space and use it to set the anchor
                                                                                 //newHinge.enableCollision = true; //enable the connected objects to collide (if you want)
+            newHinge.autoConfigureConnectedAnchor = false;
             gameObject.transform.parent = Bod.transform;
             
         }
