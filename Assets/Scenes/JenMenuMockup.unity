@@ -399,12 +399,12 @@ PrefabInstance:
     - target: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -262.98096
+      value: -173
       objectReference: {fileID: 0}
     - target: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 80.87341
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
         type: 3}
@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 892576863}
   - component: {fileID: 892576867}
   m_Layer: 0
-  m_Name: UIDialogueBox1
+  m_Name: InteractableTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1863,7 +1863,7 @@ GameObject:
   - component: {fileID: 1722546408}
   - component: {fileID: 1722546411}
   m_Layer: 0
-  m_Name: UIDialogueBoxW0
+  m_Name: PlayerTest
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2954,6 +2954,31 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1753115032953666201}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8032908112328621120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8032908111713628722, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 616042098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8032908112328621121
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032908112328621120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0c64e8920149cf458cf56bfa1d8f72d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &8032908113057679979 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8032908112594732057, guid: c633a0a4ec182f14fb64e55e1b0f2dd9,

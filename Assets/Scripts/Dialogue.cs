@@ -17,7 +17,6 @@ public class Dialogue : MonoBehaviour
     //[SerializeField] private bool _triggerOnEnter = false;
 
     private string[] _dialogue = null;
-    //private int _dialogueIndex = 0;
 
     private int _charIndex = 0;
     private float _textTimer;
@@ -78,26 +77,26 @@ public class Dialogue : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown("e") && _entered == true)
+        {
+            if(_animDone == false)
             {
-                if(_animDone == false)
+                _text.text = "";
+                _boxAnim.SetBool("Talked", true);
+                _animStarted = true;
+            }else{  
+                if(_index < _dialogue.Length - 1)
                 {
+                    _clicked = true;
+                    _charIndex = 0;
+                    _index++;
+                }else{
+                    _boxAnim.SetBool("Talked", false);
                     _text.text = "";
-                    _boxAnim.SetBool("Talked", true);
-                    _animStarted = true;
-                }else{  
-                    if(_index < _dialogue.Length - 1)
-                    {
-                        _clicked = true;
-                        _charIndex = 0;
-                        _index++;
-                    }else{
-                        _boxAnim.SetBool("Talked", false);
-                        _text.text = "";
-                        _animTimer = _animTime;
-                        _animDone = false;
-                    }   
-                }
+                    _animTimer = _animTime;
+                    _animDone = false;
+                }   
             }
+        }
 
         if(_animStarted == true)
         {
