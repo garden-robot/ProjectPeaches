@@ -550,7 +550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &694055898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,7 +684,7 @@ MonoBehaviour:
   - fuck 6
   - ass 6
   _boxAnim: {fileID: 8783029968383031897}
-  _animTime: 0.8
+  _animTime: 0.6
   _text: {fileID: 6297896736159946534}
   _triggerOnEnter: 1
   _animCloseTime: 0.8
@@ -854,8 +854,6 @@ MonoBehaviour:
   _textClickSize: 35
   _buttonWaitTime: 0.05
   _cameraAnim: {fileID: 1893235275}
-  _camScaleTime: 5
-  _introDialogue: {fileID: 0}
   _credits: {fileID: 124354169}
   _buttons:
   - {fileID: 1748272780}
@@ -1216,8 +1214,6 @@ MonoBehaviour:
   _textClickSize: 35
   _buttonWaitTime: 0.05
   _cameraAnim: {fileID: 1893235275}
-  _camScaleTime: 5
-  _introDialogue: {fileID: 0}
   _credits: {fileID: 124354169}
   _buttons:
   - {fileID: 1319298776}
@@ -1615,8 +1611,6 @@ MonoBehaviour:
   _textClickSize: 35
   _buttonWaitTime: 0.05
   _cameraAnim: {fileID: 1893235275}
-  _camScaleTime: 5
-  _introDialogue: {fileID: 0}
   _credits: {fileID: 124354169}
   _buttons:
   - {fileID: 1462722644}
@@ -1955,7 +1949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722546407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.23, y: -1.86, z: 0}
+  m_LocalPosition: {x: -16.33, y: -2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2219,8 +2213,6 @@ MonoBehaviour:
   _textClickSize: 35
   _buttonWaitTime: 0.05
   _cameraAnim: {fileID: 1893235275}
-  _camScaleTime: 5
-  _introDialogue: {fileID: 0}
   _credits: {fileID: 124354169}
   _buttons:
   - {fileID: 1748272780}

@@ -106,12 +106,13 @@ public class Dialogue : MonoBehaviour
                 _index++;
             }else{
                 _boxAnim.SetBool("Talked", false);
-                _text.text = "";
+                //_text.text = "";
                 _animTimer = _animTime;
                 if(_triggerOnEnter == true){
                     _enterTriggered = false;
                     _animCloseTimer = _animCloseTime;
                 }
+                _text.text = "";
                 _animDone = false;
             }   
         } 
