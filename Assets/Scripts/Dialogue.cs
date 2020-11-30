@@ -99,22 +99,27 @@ public class Dialogue : MonoBehaviour
         //contine dialogue on dialogue key down if dialogue started 
         if(_animDone == true && Input.GetKeyDown("e"))
         {
-            if(_index < _dialogue.Length - 1)
-            {
-                _clicked = true;
-                _charIndex = 0;
-                _index++;
+            if (_charIndex < _dialogue[_index].Length) {
+                _charIndex = _dialogue[_index].Length;
+                _text.text = _dialogue[_index];
             }else{
-                _boxAnim.SetBool("Talked", false);
-                //_text.text = "";
-                _animTimer = _animTime;
-                if(_triggerOnEnter == true){
-                    _enterTriggered = false;
-                    _animCloseTimer = _animCloseTime;
-                }
-                _text.text = "";
-                _animDone = false;
-            }   
+                if(_index < _dialogue.Length - 1)
+                {
+                    _clicked = true;
+                    _charIndex = 0;
+                    _index++;
+                }else{
+                    _boxAnim.SetBool("Talked", false);
+                    //_text.text = "";
+                    _animTimer = _animTime;
+                    if(_triggerOnEnter == true){
+                        _enterTriggered = false;
+                        _animCloseTimer = _animCloseTime;
+                    }
+                    _text.text = "";
+                    _animDone = false;
+                }  
+            } 
         } 
 
         //check if player still in trigger zone and pressed E
@@ -145,7 +150,7 @@ public class Dialogue : MonoBehaviour
             }
         }
 
-        //dialogue runs
+        //dialogue running
         if(_clicked == true){
             if(_index < _dialogue.Length){
                 if (_charIndex < _dialogue[_index].Length) {
