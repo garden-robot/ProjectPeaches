@@ -686,6 +686,8 @@ MonoBehaviour:
   _boxAnim: {fileID: 8783029968383031897}
   _animTime: 0.8
   _text: {fileID: 6297896736159946534}
+  _triggerOnEnter: 1
+  _animCloseTime: 0.8
 --- !u!58 &892576864
 CircleCollider2D:
   m_ObjectHideFlags: 0

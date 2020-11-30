@@ -49,7 +49,7 @@ public class Dialogue : MonoBehaviour
             if(_triggerOnEnter == true){
                 _enterTriggered = true;
             }
-            print("Ya");
+            //print("Ya");
             //DialogueTrigger();
             _entered = true;
         }
@@ -59,7 +59,7 @@ public class Dialogue : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            print("Nah");
+            //print("Nah");
             _boxAnim.SetBool("Talked", false);
             _text.text = "";
             if(_triggerOnEnter == true){
@@ -110,6 +110,7 @@ public class Dialogue : MonoBehaviour
                 _animTimer = _animTime;
                 if(_triggerOnEnter == true){
                     _enterTriggered = false;
+                    _animCloseTimer = _animCloseTime;
                 }
                 _animDone = false;
             }   
@@ -118,9 +119,10 @@ public class Dialogue : MonoBehaviour
         //check if player still in trigger zone and pressed E
         if(_boxAnim.GetBool("Talked") == false && _entered == true && _triggerOnEnter == true && _enterTriggered == false){
             _animCloseTimer -= Time.deltaTime;
+            //print(_animCloseTimer);
             if(Input.GetKeyDown("e") && _animCloseTimer <= 0f){
                 _enterTriggered = true;
-                _animCloseTimer = _animCloseTime;
+                //_animCloseTimer = _animCloseTime;
             }
         }
 
@@ -132,7 +134,7 @@ public class Dialogue : MonoBehaviour
             if(_animTimer <= Time.deltaTime){
                 _index = 0;
                 _animDone = true;
-                print("anim done"); 
+                //print("anim done"); 
                 if(_index < _dialogue.Length - 1)
                 {
                     _clicked = true;
