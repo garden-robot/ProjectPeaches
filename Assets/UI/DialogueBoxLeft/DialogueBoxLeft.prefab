@@ -194,6 +194,8 @@ MonoBehaviour:
   _boxAnim: {fileID: 0}
   _animTime: 10
   _text: {fileID: 0}
+  _triggerOnEnter: 0
+  _animCloseTime: 0.8
 --- !u!1 &8032908111713628722
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +344,7 @@ GameObject:
   - component: {fileID: 8032908112594732056}
   - component: {fileID: 8783029968862753835}
   m_Layer: 5
-  m_Name: DialogueBoxHolder
+  m_Name: DialogueBoxLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
