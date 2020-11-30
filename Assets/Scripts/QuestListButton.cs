@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class QuestListButton : MonoBehaviour
 {
+    [SerializeField] private Animator _crossOutAnim = null;
     [SerializeField] private Animator _listAnim = null;
 
     public void OnClick()
@@ -14,5 +15,10 @@ public class QuestListButton : MonoBehaviour
         }else {
             _listAnim.SetBool("Clicked", false);
         }
+    }
+    
+    public void OnTaskComplete()
+    {
+        _crossOutAnim.SetBool("Finished", true);
     }
 }
