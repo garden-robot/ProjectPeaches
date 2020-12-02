@@ -7,6 +7,8 @@ TagManager:
   - wall
   - biteable
   - pickUp
+  - CreepyGround
+  - PlayerParent
   layers:
   - Default
   - TransparentFX

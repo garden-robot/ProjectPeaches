@@ -17,6 +17,7 @@ public class ChompCollision : MonoBehaviour
             print("yes");
             var newHinge = gameObject.AddComponent<HingeJoint2D>(); //make the new joint component
             newHinge.connectedBody = other.rigidbody; //connect it to the object we collided with
+            // var contactPosition = other.contacts[0].point; //get world position of first contact
             var contactPosition = other.contacts[0].point; //get world position of first contact
             newHinge.anchor = transform.InverseTransformPoint(contactPosition); //convert world to local space and use it to set the anchor
                                                                                 //newHinge.enableCollision = true; //enable the connected objects to collide (if you want)
