@@ -3143,6 +3143,12 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4895446147841782341, guid: db2d862c3c0374348b9862350aff0223,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7973a9e00742d8741ab5c1ddfa7fc6b5,
+        type: 3}
     - target: {fileID: 4895446148183025981, guid: db2d862c3c0374348b9862350aff0223,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -3303,6 +3309,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestListCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4895446148935177616, guid: db2d862c3c0374348b9862350aff0223,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895446148935177616, guid: db2d862c3c0374348b9862350aff0223,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895446148935177616, guid: db2d862c3c0374348b9862350aff0223,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895446148935177616, guid: db2d862c3c0374348b9862350aff0223,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895446148935177616, guid: db2d862c3c0374348b9862350aff0223,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895446149106915444, guid: db2d862c3c0374348b9862350aff0223,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ed8ca7b9d19b55742b53b0e6166e5f29,
+        type: 3}
     - target: {fileID: 4895446149436223469, guid: db2d862c3c0374348b9862350aff0223,
         type: 3}
       propertyPath: m_AnchorMin.y
