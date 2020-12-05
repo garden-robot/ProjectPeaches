@@ -1,0 +1,368 @@
+fileFormatVersion: 2
+guid: 4bb95aa6a2cf66545b465f7685ef3ae5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2233282352843092984
+    second: peaches_final_expressions_0
+  - first:
+      213: 4756513616232271657
+    second: peaches_final_expressions_1
+  - first:
+      213: 7769354264897417743
+    second: peaches_final_expressions_2
+  - first:
+      213: -6377347757621544629
+    second: peaches_final_expressions_3
+  - first:
+      213: -7073831105477729208
+    second: peaches_final_expressions_4
+  - first:
+      213: -2956216076568985011
+    second: peaches_final_expressions_5
+  - first:
+      213: 5650141788445914763
+    second: peaches_final_expressions_6
+  - first:
+      213: -5715604514620435051
+    second: peaches_final_expressions_7
+  - first:
+      213: 2139760238428092739
+    second: peaches_final_expressions_8
+  - first:
+      213: 4687515296350500722
+    second: peaches_final_expressions_9
+  - first:
+      213: 584426112578091719
+    second: peaches_final_expressions_10
+  - first:
+      213: 8240262592820654103
+    second: peaches_final_expressions_11
+  - first:
+      213: -379315911682587625
+    second: peaches_final_expressions_12
+  - first:
+      213: -2680720015774124801
+    second: peaches_final_expressions_13
+  - first:
+      213: -2952313726334643774
+    second: peaches_final_expressions_14
+  - first:
+      213: -7605641511518839966
+    second: peaches_final_expressions_15
+  - first:
+      213: -8064900490465548911
+    second: peaches_final_expressions_16
+  - first:
+      213: 1880598772332258340
+    second: peaches_final_expressions_17
+  - first:
+      213: 9166177619534181965
+    second: peaches_final_expressions_18
+  - first:
+      213: -765663138332677122
+    second: peaches_final_expressions_19
+  - first:
+      213: 7588791569577567000
+    second: peaches_final_expressions_20
+  - first:
+      213: -3180072539846802691
+    second: peaches_final_expressions_21
+  - first:
+      213: 854523114815660954
+    second: peaches_final_expressions_22
+  - first:
+      213: 906427402987374618
+    second: peaches_final_expressions_23
+  - first:
+      213: -2526412518727346983
+    second: peaches_final_expressions_24
+  - first:
+      213: -9122687517309401309
+    second: peaches_final_expressions_25
+  - first:
+      213: -1377896097502436649
+    second: peaches_final_expressions_26
+  - first:
+      213: 9150984826290431386
+    second: peaches_final_expressions_27
+  - first:
+      213: 6341795039572999695
+    second: peaches_final_expressions_28
+  - first:
+      213: 3782204980372596829
+    second: peaches_final_expressions_0
+  - first:
+      213: -430048519921476661
+    second: peaches_final_expressions_1
+  - first:
+      213: 3672441738271466658
+    second: peaches_final_expressions_2
+  - first:
+      213: 5931268036548787232
+    second: peaches_final_expressions_3
+  - first:
+      213: 429728079498434727
+    second: peaches_final_expressions_4
+  - first:
+      213: 8785817697552740018
+    second: peaches_final_expressions_5
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: peaches_final_expressions_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 567
+        width: 118
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4f085495b2ccad0800000000000000
+      internalID: -2680720015774124801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches_final_expressions_0
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 559
+        width: 122
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5862d204671d7430800000000000000
+      internalID: 3782204980372596829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches_final_expressions_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 430
+        width: 112
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbd5ed4629280af0800000000000000
+      internalID: -430048519921476661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches_final_expressions_2
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 434
+        width: 123
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a42df3bd4227f230800000000000000
+      internalID: 3672441738271466658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches_final_expressions_3
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 290
+        width: 122
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c7e12aad8105250800000000000000
+      internalID: 5931268036548787232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches_final_expressions_4
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 274
+        width: 128
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8d3885963b6f500800000000000000
+      internalID: 429728079498434727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peaches_final_expressions_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 127
+        width: 123
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bea8fb85ae7de970800000000000000
+      internalID: 8785817697552740018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

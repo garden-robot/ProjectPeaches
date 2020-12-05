@@ -23,48 +23,58 @@ public class Shatter : MonoBehaviour
     public void GetImpactForce(Collision2D collision)
         {
             impulse = 0F;
+        if (collision.collider.tag == "PlayerParent" || collision.collider.tag == "CreepyGround")
+        {
 
             foreach (ContactPoint2D point in collision.contacts)
             {
-             impulse = point.normalImpulse;
-             //impulse = point.normalImpulse;
+                impulse = point.normalImpulse;
+                //impulse = point.normalImpulse;
+            }
         }
 
     }
-    
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
 
         var particles = ParticleShatter.GetComponent<ParticleSystem>();
         float totalDuration = particles.duration + particles.startLifetime;
         GetImpactForce(collision);
 
-            if (alreadySmashed) return;
+        if (alreadySmashed) return;
         if (impulse > breakingImpulse)
         {
-            Destroy(ShatterCollider);
-            //Destroy(gameObject.GetComponent<Rigidbody2D>());
-            Debug.Log("Smash! I'm breaking up!");
-
-            var house_health = houseHealthManager.currentHealth;
-            if (house_health != null)
-            {
-                house_health = house_health - shatterHealth;
-                houseHealthManager.currentHealth = house_health;
-            }
-            else
-            {
-                Debug.Log("house_health is null!");
-            }
-
-            Destroy(gameObject.GetComponent<SpriteRenderer>());
-            
-            particles.Play();
-
-            Destroy(gameObject, totalDuration);
             alreadySmashed = true;
+
+            if (collision.collider.tag == "PlayerParent" || collision.collider.tag == "CreepyGround") {
+                Destroy(ShatterCollider);
+                //Destroy(gameObject.GetComponent<Rigidbody2D>());
+                Debug.Log("Smash! I'm breaking up!");
+
+                
+
+                Destroy(gameObject.GetComponent<SpriteRenderer>());
+
+                particles.Play();
+
+                Destroy(gameObject, totalDuration);
+             
+                var house_health = houseHealthManager.currentHealth;
+                if (house_health != null)
+                {
+                    house_health = house_health - shatterHealth;
+                    houseHealthManager.currentHealth = house_health;
+                }
+                else
+                {
+                    Debug.Log("house_health is null!");
+                }
+                
+            }
         }
-        }
+    }
+        
         private void OnCollisionStay2D(Collision2D collision)
         {
             if (alreadySmashed) return;

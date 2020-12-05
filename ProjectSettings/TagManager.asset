@@ -9,6 +9,8 @@ TagManager:
   - pickUp
   - CreepyGround
   - PlayerParent
+  - Shatterable
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -22,8 +24,8 @@ TagManager:
   - BackLeg
   - FrontFrontLeg
   - BackFrontLeg
-  - 
-  - 
+  - Objects
+  - Bullet
   - 
   - 
   - 
