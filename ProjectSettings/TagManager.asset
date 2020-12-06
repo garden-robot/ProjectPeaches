@@ -11,6 +11,8 @@ TagManager:
   - PlayerParent
   - Shatterable
   - Bullet
+  - CameraMove
+  - ToyBasket
   layers:
   - Default
   - TransparentFX

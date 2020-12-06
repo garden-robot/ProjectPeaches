@@ -6,14 +6,19 @@ using UnityEngine;
 public class ChompCollision : MonoBehaviour
 {
     [SerializeField] private GameObject Bod;
- 
+    [SerializeField] private string objectType;
+    public ChompActive chompActive;
 
 
-    public void OnCollisionEnter2D(Collision2D other)
+    
+
+        public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.collider.tag == "biteable")
+        if (other.collider.tag == "biteable" && chompActive.isHolding == false)
         {
-          
+            chompActive.isHolding = true;
+            chompActive._pickUpObject = this.gameObject.transform;
+           
             print("yes");
             var newHinge = gameObject.AddComponent<HingeJoint2D>(); //make the new joint component
             newHinge.connectedBody = other.rigidbody; //connect it to the object we collided with
@@ -24,6 +29,13 @@ public class ChompCollision : MonoBehaviour
             newHinge.autoConfigureConnectedAnchor = false;
             gameObject.transform.parent = Bod.transform;
             
+        }
+        if (other.collider.tag == "ToyBasket" &&  objectType == "toy")
+        {
+            other.gameObject.GetComponent<ToyBasket>().Holding += 1;
+            //Basket = other.gameObject.GetComponent<ToyBasket>().Holding;
+            // Basket += 1;
+
         }
     }
 
