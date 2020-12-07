@@ -11,11 +11,9 @@ TagManager:
   - PlayerParent
   - Shatterable
   - Bullet
-  - Flower
-  - Cigarette
-  - Leash
-  - WaterBowl
-  - Gnome
+  - CameraMove
+  - ToyBasket
+  - PlayerBack
   layers:
   - Default
   - TransparentFX

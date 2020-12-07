@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScoreBasketball : MonoBehaviour
 {
+    public GameObject chompActive;
     // Start is called before the first frame update
     void Start()
     {
@@ -11,7 +12,7 @@ public class ScoreBasketball : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<Collider2D>().tag == "pickUp")
+        if (collision.GetComponent<Collider2D>().tag == "pickUp" && chompActive.activeInHierarchy == false  )
         {
             Debug.Log("Score!");
         }

@@ -44,22 +44,21 @@ public class Dialogue : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
+        //if player enters, set dialogue to start
         if(col.gameObject.tag == "Player")
         {
             if(_triggerOnEnter == true){
                 _enterTriggered = true;
             }
-            //print("Ya");
-            //DialogueTrigger();
             _entered = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D col)
     {
+        //if player exits trigger area, reset conversation
         if(col.gameObject.tag == "Player")
         {
-            //print("Nah");
             _boxAnim.SetBool("Talked", false);
             _text.text = "";
             if(_triggerOnEnter == true){
@@ -73,7 +72,7 @@ public class Dialogue : MonoBehaviour
     
     public void DialogueTrigger()
     {
-        //_dialogueIndex ++;
+        //run this function to make function move forward
         if(_dialogue == _dialogue0){
             _dialogue = _dialogue1;
         }else if(_dialogue == _dialogue1){
@@ -110,7 +109,6 @@ public class Dialogue : MonoBehaviour
                     _index++;
                 }else{
                     _boxAnim.SetBool("Talked", false);
-                    //_text.text = "";
                     _animTimer = _animTime;
                     if(_triggerOnEnter == true){
                         _enterTriggered = false;
@@ -125,10 +123,8 @@ public class Dialogue : MonoBehaviour
         //check if player still in trigger zone and pressed E
         if(_boxAnim.GetBool("Talked") == false && _entered == true && _triggerOnEnter == true && _enterTriggered == false){
             _animCloseTimer -= Time.deltaTime;
-            //print(_animCloseTimer);
             if(Input.GetKeyDown("e") && _animCloseTimer <= 0f){
                 _enterTriggered = true;
-                //_animCloseTimer = _animCloseTime;
             }
         }
 
@@ -140,7 +136,6 @@ public class Dialogue : MonoBehaviour
             if(_animTimer <= Time.deltaTime){
                 _index = 0;
                 _animDone = true;
-                //print("anim done"); 
                 if(_index < _dialogue.Length - 1)
                 {
                     _clicked = true;
