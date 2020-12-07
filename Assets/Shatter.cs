@@ -17,6 +17,7 @@ public class Shatter : MonoBehaviour
     [SerializeField] private GameObject ParticleShatter;
     [SerializeField] private Collider2D ShatterCollider;
 
+   // [SerializeField] private Animation anim;
 
 
 
@@ -52,7 +53,7 @@ public class Shatter : MonoBehaviour
                 //Destroy(gameObject.GetComponent<Rigidbody2D>());
                 Debug.Log("Smash! I'm breaking up!");
 
-                
+                //anim.Play("shakeUI");
 
                 Destroy(gameObject.GetComponent<SpriteRenderer>());
 
