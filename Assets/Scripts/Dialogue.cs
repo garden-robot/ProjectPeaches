@@ -15,6 +15,8 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private float _animTime = 10f;
     [SerializeField] private Text _text = null;
     [SerializeField] private bool _triggerOnEnter = false;
+    [SerializeField] private bool _onlyPlayOnce = false;
+    [SerializeField] private string _neededTag = "Leash";
 
     private string[] _dialogue = null;
 
@@ -30,6 +32,7 @@ public class Dialogue : MonoBehaviour
     private int _index = -1;
     private bool _clicked = false;
     private bool _entered = false;
+    private bool _objectEntered = false;
 
     private float _animTimer = 10f;
     private bool _animDone = false;
@@ -44,6 +47,11 @@ public class Dialogue : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.tag == _neededTag && _objectEntered == false){
+            DialogueTrigger();
+            _objectEntered = true;
+        }
+
         //if player enters, set dialogue to start
         if(col.gameObject.tag == "Player")
         {
@@ -115,6 +123,9 @@ public class Dialogue : MonoBehaviour
                         _animCloseTimer = _animCloseTime;
                     }
                     _text.text = "";
+                    if(_onlyPlayOnce == true){
+                        this.enabled = false;
+                    }
                     _animDone = false;
                 }  
             } 
