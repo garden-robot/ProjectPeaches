@@ -18,6 +18,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private bool _onlyPlayOnce = false;
     [SerializeField] private string _neededTag = "Leash";
     [SerializeField] private Animator _interactableAnim = null;
+    [SerializeField] private GameObject _barrier = null;
 
     private string[] _dialogue = null;
 
@@ -50,6 +51,10 @@ public class Dialogue : MonoBehaviour
     {
         if (col.tag == _neededTag && _objectEntered == false){
             DialogueTrigger();
+            if(_barrier)
+            {
+                _barrier.SetActive(false);
+            }
             _objectEntered = true;
         }
 
