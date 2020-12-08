@@ -21,6 +21,7 @@ public class Button : MonoBehaviour
     [SerializeField] private Animator _cameraAnim = null;
     //[SerializeField] private float _camScaleTime = 5f;
     //[SerializeField] private IntroDialogue _introDialogue = null;
+    [SerializeField] private GameObject _startBarrier = null;
 
     //CreditsScaling
     [SerializeField] private Animator _credits = null;
@@ -65,6 +66,7 @@ public class Button : MonoBehaviour
         _button.localScale = _clickSize;
         _cameraAnim.SetTrigger("Clicked");
         //_introDialogue.StartDialogue();
+        _startBarrier.SetActive(false);
         _clicked = true;
     }
 
