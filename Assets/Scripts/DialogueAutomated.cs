@@ -44,6 +44,10 @@ public class DialogueAutomated : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             _entered = false;
+            _boxAnim.SetBool("Talked", false);
+            _index = 0;
+            _restartTimer = _restartTime;
+            _animDone = false;
         }
     }
 
@@ -71,7 +75,7 @@ public class DialogueAutomated : MonoBehaviour
             }
         }
 
-        if(_clicked == true){
+        if(_clicked == true && _entered == true){
             if(_index < _dialogue.Length){
                 if (_charIndex < _dialogue[_index].Length) {
                     _textTimer -= Time.unscaledDeltaTime;
@@ -90,6 +94,9 @@ public class DialogueAutomated : MonoBehaviour
                         _restartTimer = _restartTime;
                     }
                 }   
+            }else{
+                _boxAnim.SetBool("Talked", false);
+                _restartTimer = _restartTime;
             }
         }
 
