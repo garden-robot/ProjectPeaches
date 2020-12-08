@@ -66,7 +66,7 @@ public class DialogueAutomated : MonoBehaviour
             if(_animTimer <= Time.deltaTime){
                 _index = 0;
                 _animDone = true;
-                if(_index < _dialogue.Length - 1)
+                if(_index < _dialogue.Length)
                 {
                     _clicked = true;
                     _charIndex = 0;
