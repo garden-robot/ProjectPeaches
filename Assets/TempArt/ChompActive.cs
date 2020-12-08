@@ -47,8 +47,17 @@ public class ChompActive : MonoBehaviour
                 anim.enabled = false;
                 isHolding = true;
             }
+            else if (_pickUpObject != null && _pickUpObject.tag == "Shatterable")
+            {
+                if (_pickUpObject.GetComponent<Shatter>().pickUp == true)
+                {
+                    anim.enabled = false;
+                    isHolding = true;
+                }
 
-        
+            }
+
+
         }
         else
         {
@@ -62,6 +71,19 @@ public class ChompActive : MonoBehaviour
                  _pickUpObject = null;
                 isHolding = false;
             }
+            else if (_pickUpObject != null && _pickUpObject.tag == "Shatterable")
+            {
+                if (_pickUpObject.GetComponent<Shatter>().pickUp == true)
+                {
+                    var joint = _pickUpObject.gameObject.GetComponent<HingeJoint2D>();
+                    Destroy(joint);
+                    _pickUpObject.parent = null;
+                    _pickUpObject = null;
+                    isHolding = false;
+                }
+
+            }
+
         }
 
 

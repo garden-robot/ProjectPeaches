@@ -14,6 +14,13 @@ TagManager:
   - CameraMove
   - ToyBasket
   - PlayerBack
+  - Leash
+  - Flower
+  - WaterBowl
+  - Cigarette
+  - DiningRoom
+  - ball
+  - furniture
   layers:
   - Default
   - TransparentFX

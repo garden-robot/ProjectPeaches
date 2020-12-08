@@ -37,6 +37,15 @@ public class ChompCollision : MonoBehaviour
             // Basket += 1;
 
         }
+        /*
+        if (other.collider.tag == "Shatterable" && objectType == "toy")
+        {
+            other.gameObject.GetComponent<ToyBasket>().Holding += 1;
+            //Basket = other.gameObject.GetComponent<ToyBasket>().Holding;
+            // Basket += 1;
+
+        }
+        */
     }
 
 }

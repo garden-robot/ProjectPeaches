@@ -12,7 +12,7 @@ public class ScoreBasketball : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<Collider2D>().tag == "pickUp" && chompActive.activeInHierarchy == false  )
+        if (collision.GetComponent<Collider2D>().tag == "ball" && chompActive.activeInHierarchy == false  )
         {
             Debug.Log("Score!");
         }
