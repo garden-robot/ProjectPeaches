@@ -17,6 +17,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private bool _triggerOnEnter = false;
     [SerializeField] private bool _onlyPlayOnce = false;
     [SerializeField] private string _neededTag = "Leash";
+    [SerializeField] private Animator _interactableAnim = null;
 
     private string[] _dialogue = null;
 
@@ -68,6 +69,9 @@ public class Dialogue : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             _boxAnim.SetBool("Talked", false);
+            if(_interactableAnim){
+                _interactableAnim.SetBool("Talking", false);
+            }
             _text.text = "";
             if(_triggerOnEnter == true){
                 _enterTriggered = false;
@@ -100,6 +104,9 @@ public class Dialogue : MonoBehaviour
         if((_enterTriggered == true || Input.GetKeyDown("e")) && _entered == true && _animDone == false){
             _text.text = "";
             _boxAnim.SetBool("Talked", true);
+            if(_interactableAnim){
+                _interactableAnim.SetBool("Talking", true);
+            }
             _animStarted = true;
         }
 
@@ -117,6 +124,9 @@ public class Dialogue : MonoBehaviour
                     _index++;
                 }else{
                     _boxAnim.SetBool("Talked", false);
+                    if(_interactableAnim){
+                        _interactableAnim.SetBool("Talking", false);
+                    }
                     _animTimer = _animTime;
                     if(_triggerOnEnter == true){
                         _enterTriggered = false;
