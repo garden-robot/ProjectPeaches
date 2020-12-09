@@ -39571,6 +39571,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1314968501}
+    - target: {fileID: 4028972227275800492, guid: 9388015657347074bb149fbe6e301771,
+        type: 3}
+      propertyPath: shotDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028972227275800492, guid: 9388015657347074bb149fbe6e301771,
+        type: 3}
+      propertyPath: shotsPerSeconds
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4028972227275800495, guid: 9388015657347074bb149fbe6e301771,
         type: 3}
       propertyPath: m_Name
