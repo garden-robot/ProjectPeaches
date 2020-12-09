@@ -19,6 +19,9 @@ public class BodyMovement : MonoBehaviour
     private Rigidbody2D _rigidBody = null;
     private Transform _transform = null;
 
+    public static BodyMovement instance; // used for knockback script
+    private AudioSource source; // used for audio
+
     void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
@@ -27,6 +30,7 @@ public class BodyMovement : MonoBehaviour
         _jumpFire.SetActive(false);
         // HingeJoint2D[] allChildren = GetComponentsInChildren<HingeJoint2D>();
         Rigidbody2D[] allChildren = GetComponentsInChildren<Rigidbody2D>();
+        source = GetComponent<AudioSource>();
 
         /*
         foreach (Transform child in allChildren)
@@ -42,6 +46,10 @@ public class BodyMovement : MonoBehaviour
     void Update()
     {
         {
+            if (!_jumpFire.activeSelf)
+            {
+                source.Play();
+            }
 
             //THRUST
             if (Input.GetKey(_thrustButton)) // left
@@ -173,5 +181,19 @@ public class BodyMovement : MonoBehaviour
 
     }
 
+    public IEnumerator Knockback (float knockbackDuration, float knockbackPower, Transform obj) // knocks peaches back when hitting water
+    {
+        float timer = 0;
+
+        while (knockbackDuration > timer)
+        {
+            timer += Time.deltaTime;
+            Vector2 direction = (obj.transform.position - this.transform.position).normalized;
+            _rigidBody.AddForce(-direction * knockbackPower);
+        }
+        yield return 0;
+    }
+        
+ 
 }
 
