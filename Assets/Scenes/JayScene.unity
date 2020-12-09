@@ -199,6 +199,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _neededTag: Leash
   _interactableAnim: {fileID: 0}
+  _barrier: {fileID: 0}
   _animCloseTime: 0.8
 --- !u!58 &31194516
 CircleCollider2D:
@@ -348,6 +349,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _neededTag: Leash
   _interactableAnim: {fileID: 0}
+  _barrier: {fileID: 0}
   _animCloseTime: 0.8
 --- !u!58 &48459177
 CircleCollider2D:
@@ -1034,6 +1036,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _neededTag: Leash
   _interactableAnim: {fileID: 0}
+  _barrier: {fileID: 0}
   _animCloseTime: 0.8
 --- !u!58 &497702673
 CircleCollider2D:
@@ -1223,6 +1226,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _neededTag: Leash
   _interactableAnim: {fileID: 0}
+  _barrier: {fileID: 0}
   _animCloseTime: 0.8
 --- !u!58 &505451366
 CircleCollider2D:
@@ -1467,6 +1471,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _neededTag: Leash
   _interactableAnim: {fileID: 0}
+  _barrier: {fileID: 0}
   _animCloseTime: 0.8
 --- !u!58 &723583091
 CircleCollider2D:
@@ -1555,7 +1560,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723583088}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e78c1245c3dd6b54a96f77338ec4379b, type: 3}
   m_Name: 
@@ -1693,6 +1698,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _neededTag: Leash
   _interactableAnim: {fileID: 0}
+  _barrier: {fileID: 0}
   _animCloseTime: 0.8
 --- !u!58 &746011696
 CircleCollider2D:
@@ -1991,6 +1997,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _neededTag: Leash
   _interactableAnim: {fileID: 0}
+  _barrier: {fileID: 0}
   _animCloseTime: 0.8
 --- !u!58 &960106474
 CircleCollider2D:
@@ -2237,6 +2244,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _neededTag: Leash
   _interactableAnim: {fileID: 0}
+  _barrier: {fileID: 0}
   _animCloseTime: 0.8
 --- !u!58 &1386092747
 CircleCollider2D:
@@ -2903,6 +2911,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _neededTag: Leash
   _interactableAnim: {fileID: 0}
+  _barrier: {fileID: 0}
   _animCloseTime: 0.8
 --- !u!58 &1634889783
 CircleCollider2D:
@@ -3067,6 +3076,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _neededTag: Leash
   _interactableAnim: {fileID: 0}
+  _barrier: {fileID: 0}
   _animCloseTime: 0.8
 --- !u!58 &1783310889
 CircleCollider2D:
@@ -3392,6 +3402,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _neededTag: Leash
   _interactableAnim: {fileID: 0}
+  _barrier: {fileID: 0}
   _animCloseTime: 0.8
 --- !u!58 &1966968633
 CircleCollider2D:
