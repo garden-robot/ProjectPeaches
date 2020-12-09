@@ -21,6 +21,7 @@ TagManager:
   - DiningRoom
   - ball
   - furniture
+  - Knockable
   layers:
   - Default
   - TransparentFX

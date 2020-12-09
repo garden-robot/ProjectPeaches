@@ -97,6 +97,7 @@ public class BodyMovement : MonoBehaviour
             {
                 _jumpFire.SetActive(true);
                 _rigidBody.velocity += (new Vector2(_transform.up.x, _transform.up.y) * _jumpSpeed);
+
             }
             else if (Input.GetKeyUp(_jumpButton))
             {
@@ -140,6 +141,9 @@ public class BodyMovement : MonoBehaviour
             {
                 _lookTowardMouse.angleOffset = 180;
             }
+
+
+
             /*
             foreach (HingeJoint2D child in allChildren)
             {

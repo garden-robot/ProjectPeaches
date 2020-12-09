@@ -18,7 +18,7 @@ public class WaitAndDestroyOnCollision : MonoBehaviour
         {
             collision.rigidbody.AddRelativeForce(transform.forward * playerHitForce);
         }
-        else if (collision.collider.tag == "Shatterable")
+        else if (collision.collider.tag == "Shatterable" || collision.collider.tag == "Knockable")
         {
             Physics2D.IgnoreCollision(collision.collider, this.GetComponent<Collider2D>());
         }
@@ -26,7 +26,7 @@ public class WaitAndDestroyOnCollision : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Shatterable")
+        if (collision.collider.tag == "Shatterable" || collision.collider.tag == "Knockable")
         {
             Physics2D.IgnoreCollision(collision.collider, this.GetComponent<Collider2D>());
         }
@@ -36,7 +36,7 @@ public class WaitAndDestroyOnCollision : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-         if (collision.GetComponent<Collider>().tag == "Shatterable")
+         if (collision.GetComponent<Collider>().tag == "Shatterable" || collision.GetComponent<Collider>().tag == "Knockable")
         {
             Physics2D.IgnoreCollision(collision.GetComponent<Collider2D>(), this.GetComponent<Collider2D>(),true);
         }
