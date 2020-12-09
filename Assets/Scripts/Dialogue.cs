@@ -6,6 +6,22 @@ using UnityEngine.UI;
 [RequireComponent(typeof(AudioSource))]
 public class Dialogue : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject creepyPasta;
+    public bool isDad;
+    public bool isFrozen;
+    public bool talkedToCreepyPasta1;
+    public GameObject creepyPastaKitchen;
+
+    public GameObject Leash;
+
+    public bool creepyPastaLose;
+
+    public GameObject creepyBossDialogue1;
+    public GameObject creepyLose1;
+
+    public ThrowStuff throwStuff;
+
     [SerializeField] private string[] _dialogue0 = null;
     [SerializeField] private string[] _dialogue1 = null;
     [SerializeField] private string[] _dialogue2 = null;
@@ -68,11 +84,23 @@ public class Dialogue : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
+        if (isFrozen == true)
+        {
+            player.GetComponent<BodyMovement>().enabled = false;
+        }
         if (col.tag == _neededTag && _objectEntered == false){
+            
+            
             DialogueTrigger();
             if(_barrier)
             {
                 _barrier.SetActive(false);
+            }
+
+          
+            if (isFrozen==true)
+            {
+                player.GetComponent<BodyMovement>().enabled = true;
             }
             _objectEntered = true;
         }
@@ -80,10 +108,15 @@ public class Dialogue : MonoBehaviour
         //if player enters, set dialogue to start
         if(col.gameObject.tag == "Player")
         {
+           
             if(_triggerOnEnter == true){
                 _enterTriggered = true;
             }
             _entered = true;
+        }
+        if (isFrozen == true)
+        {
+            player.GetComponent<BodyMovement>().enabled = true;
         }
     }
 
@@ -103,6 +136,31 @@ public class Dialogue : MonoBehaviour
             _animTimer = _animTime;
             _animDone = false;
             _entered = false;
+
+            if (talkedToCreepyPasta1)
+            {
+                Destroy(this);
+                Destroy(creepyPastaKitchen);
+            }
+
+            if(isDad == true)
+            {
+                Leash.SetActive(true);
+                creepyPasta.SetActive(true);
+                creepyBossDialogue1.SetActive(true);
+                creepyLose1.SetActive(true);
+                if (isFrozen == true)
+                {
+                    player.GetComponent<BodyMovement>().enabled = true;
+                }
+            }
+            if (creepyPastaLose)
+            {
+                Destroy(creepyBossDialogue1);
+                Destroy(throwStuff);
+            }
+          
+
         }
     }
     
@@ -112,6 +170,7 @@ public class Dialogue : MonoBehaviour
         if(_dialogue == _dialogue0){
             _dialogue = _dialogue1;
             _convoIndex++;
+
         }else if(_dialogue == _dialogue1){
             _dialogue = _dialogue2;
             _convoIndex++;
@@ -204,6 +263,8 @@ public class Dialogue : MonoBehaviour
                         }
                     }
                     _animDone = false;
+
+                    
                 }  
             } 
         } 
