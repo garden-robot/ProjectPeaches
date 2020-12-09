@@ -131,8 +131,8 @@ public class Dialogue : MonoBehaviour
         if(_interactableClip && _audio){
             _audio.Play();
         }
-        if(_peachesFaces.Length > 0){
-            if(_index <= _peachesFaces.Length +1 &&_peachesFaces[_index])
+        if(_peachesFaces.Length != 0){
+            if(_index <= _peachesFaces.Length + 1 &&_peachesFaces[_index])
             {
                 if(_idleFace){
                     if(_idleFace.activeSelf == true){
