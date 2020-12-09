@@ -131,17 +131,19 @@ public class Dialogue : MonoBehaviour
         if(_interactableClip){
             _audio.Play();
         }
-        if(_peachesFaces != null){
+        if(_peachesFaces.Length > 0){
             if(_index <= _peachesFaces.Length +1 &&_peachesFaces[_index])
             {
-                if(_idleFace.activeSelf == true){
-                _idleFace.SetActive(false);
+                if(_idleFace){
+                    if(_idleFace.activeSelf == true){
+                    _idleFace.SetActive(false);
+                }
             }
              if(_index-1 >= 0){
                 _peachesFaces[_index -1].SetActive(false);
             }
             _peachesFaces[_index ].SetActive(true);
-            print(_index);
+            //print(_index);
             }
         }
     }
@@ -183,10 +185,15 @@ public class Dialogue : MonoBehaviour
                         _animCloseTimer = _animCloseTime;
                     }
                     _text.text = "";
-                    
-                    if(_idleFace.activeSelf == false){
-                        _idleFace.SetActive(true);
-                        _peachesFaces[_index-1].SetActive(false);
+                    if(_idleFace){
+                        if(_idleFace.activeSelf == false){
+                            _idleFace.SetActive(true);
+                        }
+                    }
+                    if(_index-1 >= 0 && _index-1 <= _peachesFaces.Length -1){
+                        if(_peachesFaces[_index-1]){
+                            _peachesFaces[_index-1].SetActive(false);
+                        }
                     }
                     if(_nextDialogueConvoNum == _convoIndex){
                         if(_nextDialogueActive){

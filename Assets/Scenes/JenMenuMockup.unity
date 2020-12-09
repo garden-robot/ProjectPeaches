@@ -493,18 +493,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106659856}
   m_CullTransparentMesh: 0
---- !u!114 &115350819 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5515938943522896677, guid: dfba8254da0c1724c90e21e7ba42e0db,
-    type: 3}
-  m_PrefabInstance: {fileID: 987410183513110122}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &124354166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,18 +2432,8 @@ MonoBehaviour:
   - {fileID: 1795987464}
   - {fileID: 1637561212}
   - {fileID: 1795987464}
-  _peachesBarkClips:
-  - {fileID: 0}
-  - {fileID: 0}
   _interactableClip: {fileID: 8300000, guid: a19e13b071f67434d9e0af92f0641941, type: 3}
-  _peachesAudio: {fileID: 1722546412}
   _idleFace: {fileID: 1618601787}
-  _peachesResponses:
-  - 
-  - fuck
-  _peachesBoxAnim: {fileID: 1791353941}
-  _peachesText: {fileID: 115350819}
-  _peachesAnimTime: 0.6
 --- !u!58 &892576864
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5429,12 +5407,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &1791353941 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7064324485370844762, guid: dfba8254da0c1724c90e21e7ba42e0db,
-    type: 3}
-  m_PrefabInstance: {fileID: 987410183513110122}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1795987464
 GameObject:
   m_ObjectHideFlags: 0
