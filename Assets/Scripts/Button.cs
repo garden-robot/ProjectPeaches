@@ -29,8 +29,10 @@ public class Button : MonoBehaviour
     //Fade out Buttons
     [SerializeField] private Animator[] _buttons = null;
     [SerializeField] private float _clickedTime = 0.2f;
+    [SerializeField] private float _camOffTime = 1f;
     [SerializeField] private Animator _backButton = null;
     private float _clickedTimer = 1f;
+    private bool _begun = false;
     private int _index = 0;
     private RectTransform _button = null;
     private bool _clicked = false;
@@ -67,6 +69,7 @@ public class Button : MonoBehaviour
         _cameraAnim.SetTrigger("Clicked");
         //_introDialogue.StartDialogue();
         _startBarrier.SetActive(false);
+        _begun = true;
         _clicked = true;
     }
 
@@ -135,6 +138,17 @@ public class Button : MonoBehaviour
             }else{
                 _index = 0;
                 _backClicked = false;
+            }
+        }
+
+        if(_begun == true)
+        {  
+            _camOffTime -= Time.deltaTime;
+            print(_camOffTime);
+            if(_camOffTime <= 0f){
+                _cameraAnim.enabled = false;
+                
+                _begun = false;
             }
         }
     }
