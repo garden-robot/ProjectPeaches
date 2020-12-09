@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class Dialogue : MonoBehaviour
 {
     [SerializeField] private string[] _dialogue0 = null;
@@ -31,18 +32,9 @@ public class Dialogue : MonoBehaviour
 
     [Header("Peaches Responses")]
     [SerializeField] private GameObject[] _peachesFaces = null;
-    [SerializeField] private AudioClip[] _peachesBarkClips = null;
     [SerializeField] private AudioClip _interactableClip = null;
-    [SerializeField] private AudioSource _peachesAudio = null;
     [SerializeField] private GameObject _idleFace = null;
 
-
-    [SerializeField] private string[] _peachesResponses = null;
-    [SerializeField] private Animator _peachesBoxAnim = null;
-    [SerializeField] private Text _peachesText = null;
-    [SerializeField] private float _peachesAnimTime = 0.6f;
-    private int _responseCharIndex;
-    private float _peachesAnimTimer = 0.6f;
     private AudioSource _audio = null;
     private int _convoIndex = 0;
 
@@ -63,8 +55,12 @@ public class Dialogue : MonoBehaviour
 
     void Awake()
     {
-        _audio = GetComponent<AudioSource>();
-        _audio.clip = _interactableClip;
+        if(GetComponent<AudioSource>() != null){
+            _audio = GetComponent<AudioSource>();
+        }
+        if(_interactableClip){
+            _audio.clip = _interactableClip;
+        }
         _animTimer = _animTime;
         _animCloseTimer = _animCloseTime;
         _text.text = "";
@@ -132,36 +128,23 @@ public class Dialogue : MonoBehaviour
     }
 
     private void DialogueExtras(){
-        _audio.Play();
-        if(_index <= _peachesFaces.Length +1 &&_peachesFaces[_index])
-        {
-            if(_idleFace.activeSelf == true){
+        if(_interactableClip){
+            _audio.Play();
+        }
+        if(_peachesFaces != null){
+            if(_index <= _peachesFaces.Length +1 &&_peachesFaces[_index])
+            {
+                if(_idleFace.activeSelf == true){
                 _idleFace.SetActive(false);
             }
              if(_index-1 >= 0){
                 _peachesFaces[_index -1].SetActive(false);
             }
-
             _peachesFaces[_index ].SetActive(true);
             print(_index);
-           
-        }
-
-
-        if(_index-1 >= 0 && _peachesBarkClips[_index -1]){
-            if(_peachesBarkClips[_index -1]){
-                _peachesAudio.clip = _peachesBarkClips[_index-1];
-                _peachesAudio.Play();
             }
-        }else if(_index-1 < 0 && _peachesBarkClips[0]){
-            _peachesAudio.clip = _peachesBarkClips[0];
-            _peachesAudio.Play();
         }
-
-
     }
-
-    
 
     void Update()
     {
