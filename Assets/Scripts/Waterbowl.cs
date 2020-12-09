@@ -4,22 +4,15 @@ using UnityEngine;
 
 public class Waterbowl : MonoBehaviour
 {
-    public Transform doghouse;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float knockbackPower = 100;
+    public float knockbackDuration = 1;
 
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D activator)
     {
-        Debug.Log("AHH WATER!");
-
-        if (activator.tag == "Player")
+        if (activator.tag == "PlayerParent")
         {
-            activator.transform.position = doghouse.position;
+            StartCoroutine(BodyMovement.instance.Knockback(knockbackDuration, knockbackPower, this.transform));
         }
     }
 }
