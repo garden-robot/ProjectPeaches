@@ -27,6 +27,23 @@ public class Dialogue : MonoBehaviour
     private bool _enterTriggered = false;
     private float _animCloseTimer = 0.8f;
 
+    [Header("Peaches Responses")]
+    [SerializeField] private GameObject[] _peachesFaces = null;
+    [SerializeField] private AudioClip[] _peachesBarkClips = null;
+    [SerializeField] private AudioClip _interactableClip = null;
+    [SerializeField] private AudioSource _peachesAudio = null;
+    [SerializeField] private GameObject _idleFace = null;
+
+
+    [SerializeField] private string[] _peachesResponses = null;
+    [SerializeField] private Animator _peachesBoxAnim = null;
+    [SerializeField] private Text _peachesText = null;
+    [SerializeField] private float _peachesAnimTime = 0.6f;
+    private int _responseCharIndex;
+    private float _peachesAnimTimer = 0.6f;
+    private AudioSource _audio = null;
+    private int _responseIndex = 0;
+
 
     private int _charIndex = 0;
     private float _textTimer;
@@ -39,9 +56,13 @@ public class Dialogue : MonoBehaviour
     private float _animTimer = 10f;
     private bool _animDone = false;
     private bool _animStarted = false;
+    
+    
 
     void Awake()
     {
+        _audio = GetComponent<AudioSource>();
+        _audio.clip = _interactableClip;
         _animTimer = _animTime;
         _animCloseTimer = _animCloseTime;
         _text.text = "";
@@ -103,12 +124,44 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    private void DialogueExtras(){
+        _audio.Play();
+        if(_index <= _peachesFaces.Length +1 &&_peachesFaces[_index])
+        {
+            if(_idleFace.activeSelf == true){
+                _idleFace.SetActive(false);
+            }
+             if(_index -1 >= 0){
+                _peachesFaces[_index-1].SetActive(false);
+            }
+            _peachesFaces[_index].SetActive(true);
+            print(_index);
+           
+        }
+
+
+        if(_index-1 >= 0 && _peachesBarkClips[_index -1]){
+            if(_peachesBarkClips[_index -1]){
+                _peachesAudio.clip = _peachesBarkClips[_index-1];
+                _peachesAudio.Play();
+            }
+        }else if(_index-1 < 0 && _peachesBarkClips[0]){
+            _peachesAudio.clip = _peachesBarkClips[0];
+            _peachesAudio.Play();
+        }
+
+
+    }
+
+    
+
     void Update()
     {
         //start dialogue on enter or if get key down
         if((_enterTriggered == true || Input.GetKeyDown("e")) && _entered == true && _animDone == false){
             _text.text = "";
             _boxAnim.SetBool("Talked", true);
+            
             if(_interactableAnim){
                 _interactableAnim.SetBool("Talking", true);
             }
@@ -126,6 +179,7 @@ public class Dialogue : MonoBehaviour
                 {
                     _clicked = true;
                     _charIndex = 0;
+                    DialogueExtras();
                     _index++;
                 }else{
                     _boxAnim.SetBool("Talked", false);
@@ -140,6 +194,10 @@ public class Dialogue : MonoBehaviour
                     _text.text = "";
                     if(_onlyPlayOnce == true){
                         this.enabled = false;
+                    }
+                    if(_idleFace.activeSelf == false){
+                        _idleFace.SetActive(true);
+                        _peachesFaces[_index-1].SetActive(false);
                     }
                     _animDone = false;
                 }  
@@ -167,6 +225,7 @@ public class Dialogue : MonoBehaviour
                     _clicked = true;
                     _charIndex = 0;
                 } 
+                DialogueExtras();
                 _animStarted = false;
             }
         }
@@ -186,5 +245,8 @@ public class Dialogue : MonoBehaviour
                 }   
             }
         }
+
+        //peaches dialogue running
+        
     }
 }
