@@ -19,6 +19,8 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private string _neededTag = "Leash";
     [SerializeField] private Animator _interactableAnim = null;
     [SerializeField] private GameObject _barrier = null;
+    [SerializeField] private int _nextDialogueConvoNum = 0;
+    [SerializeField] private GameObject _nextDialogueActive = null;
 
     private string[] _dialogue = null;
 
@@ -42,7 +44,7 @@ public class Dialogue : MonoBehaviour
     private int _responseCharIndex;
     private float _peachesAnimTimer = 0.6f;
     private AudioSource _audio = null;
-    private int _responseIndex = 0;
+    private int _convoIndex = 0;
 
 
     private int _charIndex = 0;
@@ -113,14 +115,19 @@ public class Dialogue : MonoBehaviour
         //run this function to make function move forward
         if(_dialogue == _dialogue0){
             _dialogue = _dialogue1;
+            _convoIndex++;
         }else if(_dialogue == _dialogue1){
             _dialogue = _dialogue2;
+            _convoIndex++;
         }else if(_dialogue == _dialogue2){
             _dialogue = _dialogue3;
+            _convoIndex++;
         }else if(_dialogue == _dialogue3){
             _dialogue = _dialogue4;
+            _convoIndex++;
         }else{
             _dialogue = _dialogue5;
+            _convoIndex = 5;
         }
     }
 
@@ -131,10 +138,11 @@ public class Dialogue : MonoBehaviour
             if(_idleFace.activeSelf == true){
                 _idleFace.SetActive(false);
             }
-             if(_index -1 >= 0){
-                _peachesFaces[_index-1].SetActive(false);
+             if(_index-1 >= 0){
+                _peachesFaces[_index -1].SetActive(false);
             }
-            _peachesFaces[_index].SetActive(true);
+
+            _peachesFaces[_index ].SetActive(true);
             print(_index);
            
         }
@@ -192,12 +200,18 @@ public class Dialogue : MonoBehaviour
                         _animCloseTimer = _animCloseTime;
                     }
                     _text.text = "";
-                    if(_onlyPlayOnce == true){
-                        this.enabled = false;
-                    }
+                    
                     if(_idleFace.activeSelf == false){
                         _idleFace.SetActive(true);
                         _peachesFaces[_index-1].SetActive(false);
+                    }
+                    if(_nextDialogueConvoNum == _convoIndex){
+                        if(_nextDialogueActive){
+                            _nextDialogueActive.SetActive(true);
+                            if(_onlyPlayOnce == true){
+                                this.enabled = false;
+                            }
+                        }
                     }
                     _animDone = false;
                 }  
