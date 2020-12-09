@@ -7,12 +7,22 @@ public class Waterbowl : MonoBehaviour
     public float knockbackPower = 100;
     public float knockbackDuration = 1;
 
-    // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D activator)
+    private AudioSource source; // used for audio
+
+    void Awake()
     {
-        if (activator.tag == "PlayerParent")
+        source = GetComponent<AudioSource>();
+    }
+
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "PlayerParent")
         {
+            Debug.Log("This is working");
             StartCoroutine(BodyMovement.instance.Knockback(knockbackDuration, knockbackPower, this.transform));
+            source.Play();
+
         }
     }
 }

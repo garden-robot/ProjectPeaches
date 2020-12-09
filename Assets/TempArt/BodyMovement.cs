@@ -185,7 +185,7 @@ public class BodyMovement : MonoBehaviour
 
     }
 
-    public IEnumerator Knockback (float knockbackDuration, float knockbackPower, Transform obj) // knocks peaches back when hitting water
+    public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform obj) // knockback for peaches touching waterbowl
     {
         float timer = 0;
 
@@ -197,7 +197,6 @@ public class BodyMovement : MonoBehaviour
         }
         yield return 0;
     }
-        
- 
+
 }
 
