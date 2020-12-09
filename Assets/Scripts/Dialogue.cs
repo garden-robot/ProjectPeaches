@@ -58,7 +58,7 @@ public class Dialogue : MonoBehaviour
         if(GetComponent<AudioSource>() != null){
             _audio = GetComponent<AudioSource>();
         }
-        if(_interactableClip){
+        if(_interactableClip && _audio){
             _audio.clip = _interactableClip;
         }
         _animTimer = _animTime;
