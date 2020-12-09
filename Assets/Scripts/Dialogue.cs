@@ -128,7 +128,7 @@ public class Dialogue : MonoBehaviour
     }
 
     private void DialogueExtras(){
-        if(_interactableClip){
+        if(_interactableClip && _audio){
             _audio.Play();
         }
         if(_peachesFaces.Length > 0){
